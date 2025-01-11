@@ -31,9 +31,15 @@ public class Factors{
 				if(index == maxFactor){
 				    maxFactor *= 2;
 					int temp[] = new int[maxFactor];
+			
 					
 					// Copy elements from factors array to temp
-                    System.arraycopy(array, 0, temp, 0, array.length);
+                    
+                    for(int k=0;k<array.length;k++){
+                                        temp[k]=array[k];
+                    
+                    }
+                    
                     array = temp; 
 			    }
 				

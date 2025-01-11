@@ -1,72 +1,68 @@
-//Write a program to save odd and even numbers in their corresponding array
-//Create a class name PrintNumbers
+//Write a program to take user input for 5 numbers 
+//and check whether a number is positive,  negative, or zero. 
+//Further for positive numbers check if the number is even or odd. 
+//Finally compare the first and last elements of the array and display if they equal, greater or less
 
-import java.util.*;
 
-public class PrintOddEvenNumbers{
-    public static void main(String[] args) {
-        
+import java.util.Scanner;
 
-        //Crerate a Scanner object
+//Creating a class with name NumberCheck
+public class NumberCheck {
+    public static void main(String[] args){
+
+        //Create a Scanner Object
         Scanner input = new Scanner(System.in);
 
-
-        //Create an integer variable name number to take input user
-        System.out.println("Enter number:");
-        int number = input.nextInt();
+        //Creating an array number
+        int[] number = new int[5];
 
 
-        //Check if number is natural or not
-        if(number < 0){
-            System.out.println(number + "is not natural number");
-            System.exit(0);
-        }
+        //Getting input of number from the user
+        System.out.println("Enter the numbers: ");
+	    for(int i=0; i<number.length; i++){
+	        number[i] = input.nextInt();
+	    }
+        
+        //Accesing number through for loop
+        for(int i=0; i<number.length; i++){
+		
+            //condition for checking positive and odd/even number
+            if(number[i] >0){
+               System.out.print(number[i] + " number is positive , ");
 
-
-        //Create an array for even numbers
-        int evennumber[] = new int[number / 2 + 1];
-
-
-        //Create an aray for odd numbers
-        int oddnumber[] = new int[number / 2 + 1];
-
-
-        //For saving even number;
-        int evenIndex = 0;
-
-
-        //For saving odd number;
-        int oddindex = 0;
-
-
-        //Iterate into the even array by using for loop
-        for(int i = 1; i< number;i++){
-            if(i % 2 == 0){
-                evennumber[evenIndex] = i;
-            }else{
-                oddnumber[oddindex] = i;
+               if(number[i] % 2==0){
+                System.out.println(number[i]+" number is even");  
+               }
+               else{
+                System.out.println(number[i] + " number is odd");
+               }
+               
             }
+
+            //condition for negative number
+            else if(number[i]<0){
+                System.out.println(number[i]+" number is negative");
+            }
+
+            //condition for zero
+            else{
+                System.out.println(number[i]+" number is zero");
+            }
+
         }
-    
-    
-    // Printing the even numbers array
-    System.out.print("Even Numbers: ");
-    for (int i = 0; i < evenIndex; i++) {
-        System.out.print(evennumber[i] + " ");
-    }
-    System.out.println();
 
-    // Printing the odd numbers array
-    System.out.print("Odd Numbers: ");
-    for (int i = 0; i < oddindex; i++) {
-        System.out.print(oddnumber[i] + " ");
-    }
-    System.out.println();
-
-
-
-    //Closing Scanner
-    input.close();   
+        //comparing first and last element of array
+        if (number[0]== number[4]){
+            System.out.println("first and last number are equal");
+        }
+        else if(number[0]> number[1]){
+            System.out.println("first number is greater than the last");
+        }
+        else{
+            System.out.println("last number is greater than first");
+        }
+		
+		
+		input.close();
     }
 }
-

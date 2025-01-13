@@ -26,11 +26,11 @@ public static void main(String args[]){
 int arr[]=new int [10];
 for(int i=0;i<10;i++){
 
-arr[i]=OTP.otp();
+arr[i]=otp();
 System.out.println(arr[i]);
 }
 
-System.out.println(OTP.validate(arr));
+System.out.println(validate(arr));
 
 // calling the funtion to store the OTP in the array
 

@@ -1,66 +1,56 @@
 public class UnitConverter {
 
-    // Method to convert Fahrenheit to Celsius
-    public static double convertFahrenheitToCelsius(double fahrenheit) {
-        double fahrenheit2celsius = (fahrenheit - 32) * 5 / 9;
-        return fahrenheit2celsius;
+    // Method to convert yards to feet
+    public static double convertYardsToFeet(double yards) {
+        double yards2feet = 3;
+        return yards * yards2feet;
     }
 
-    // Method to convert Celsius to Fahrenheit
-    public static double convertCelsiusToFahrenheit(double celsius) {
-        double celsius2fahrenheit = (celsius * 9 / 5) + 32;
-        return celsius2fahrenheit;
+    // Method to convert feet to yards
+    public static double convertFeetToYards(double feet) {
+        double feet2yards = 0.333333;
+        return feet * feet2yards;
     }
 
-    // Method to convert pounds to kilograms
-    public static double convertPoundsToKilograms(double pounds) {
-        double pounds2kilograms = 0.453592;
-        return pounds * pounds2kilograms;
+    // Method to convert meters to inches
+    public static double convertMetersToInches(double meters) {
+        double meters2inches = 39.3701;
+        return meters * meters2inches;
     }
 
-    // Method to convert kilograms to pounds
-    public static double convertKilogramsToPounds(double kilograms) {
-        double kilograms2pounds = 2.20462;
-        return kilograms * kilograms2pounds;
+    // Method to convert inches to meters
+    public static double convertInchesToMeters(double inches) {
+        double inches2meters = 0.0254;
+        return inches * inches2meters;
     }
 
-    // Method to convert gallons to liters
-    public static double convertGallonsToLiters(double gallons) {
-        double gallons2liters = 3.78541;
-        return gallons * gallons2liters;
-    }
-
-    // Method to convert liters to gallons
-    public static double convertLitersToGallons(double liters) {
-        double liters2gallons = 0.264172;
-        return liters * liters2gallons;
+    // Method to convert inches to centimeters
+    public static double convertInchesToCm(double inches) {
+        double inches2cm = 2.54;
+        return inches * inches2cm;
     }
 
     public static void main(String[] args) {
         // Example usage of the UnitConverter methods
 
-        double fahrenheit = 100.0;
-        double celsiusFromFahrenheit = convertFahrenheitToCelsius(fahrenheit);
-        System.out.println(fahrenheit + " Fahrenheit is equal to " + celsiusFromFahrenheit + " Celsius.");
+        double yards = 5.0;
+        double feetFromYards = convertYardsToFeet(yards);
+        System.out.println(yards + " yards is equal to " + feetFromYards + " feet.");
 
-        double celsius = 37.0;
-        double fahrenheitFromCelsius = convertCelsiusToFahrenheit(celsius);
-        System.out.println(celsius + " Celsius is equal to " + fahrenheitFromCelsius + " Fahrenheit.");
+        double feet = 10.0;
+        double yardsFromFeet = convertFeetToYards(feet);
+        System.out.println(feet + " feet is equal to " + yardsFromFeet + " yards.");
 
-        double pounds = 150.0;
-        double kilogramsFromPounds = convertPoundsToKilograms(pounds);
-        System.out.println(pounds + " pounds is equal to " + kilogramsFromPounds + " kilograms.");
+        double meters = 2.0;
+        double inchesFromMeters = convertMetersToInches(meters);
+        System.out.println(meters + " meters is equal to " + inchesFromMeters + " inches.");
 
-        double kilograms = 70.0;
-        double poundsFromKilograms = convertKilogramsToPounds(kilograms);
-        System.out.println(kilograms + " kilograms is equal to " + poundsFromKilograms + " pounds.");
+        double inches = 20.0;
+        double metersFromInches = convertInchesToMeters(inches);
+        System.out.println(inches + " inches is equal to " + metersFromInches + " meters.");
 
-        double gallons = 5.0;
-        double litersFromGallons = convertGallonsToLiters(gallons);
-        System.out.println(gallons + " gallons is equal to " + litersFromGallons + " liters.");
-
-        double liters = 10.0;
-        double gallonsFromLiters = convertLitersToGallons(liters);
-        System.out.println(liters + " liters is equal to " + gallonsFromLiters + " gallons.");
+        double inches2 = 15.0;
+        double cmFromInches = convertInchesToCm(inches2);
+        System.out.println(inches2 + " inches is equal to " + cmFromInches + " centimeters.");
     }
 }
